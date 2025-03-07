@@ -1,0 +1,17 @@
+name: afm_tomo_env
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9
+  - numpy
+  - matplotlib
+  - scikit-image
+  - scipy
+  - pandas
+  - pillow
+  - pip
+  - pip:
+    - dash==2.15.0
+    - dash-bootstrap-components==1.5.0
+    - plotly==5.18.0
