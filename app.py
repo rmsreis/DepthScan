@@ -21,7 +21,7 @@ app = dash.Dash(
     ],
 )
 
-app.title = "AFM Tomography Visualization"
+app.title = "DepthScan - AFM Tomography Analysis Tool"
 server = app.server  # Expose Flask server for production deployment
 
 # Define the app layout
@@ -30,7 +30,8 @@ app.layout = dbc.Container(
         dbc.Row(
             [
                 dbc.Col(
-                    html.H1("AFM Tomography Visualization", className="text-center my-4"),
+                    html.H1("DepthScan", className="text-center my-4"),
+                    html.H4("Advanced AFM Tomography Analysis Tool", className="text-center text-muted mb-4"),
                     width=12,
                 ),
             ]
@@ -264,7 +265,7 @@ app.layout = dbc.Container(
         dbc.Row(
             dbc.Col(
                 html.P(
-                    "AFM Tomography Visualization Tool | © 2025",
+                    "DepthScan - Advanced AFM Tomography Analysis Tool | © 2025",
                     className="text-center text-muted mt-4",
                 ),
                 width=12,

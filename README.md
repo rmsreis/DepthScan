@@ -1,6 +1,6 @@
-# AFM Tomography Visualization Tool
+# DepthScan
 
-A comprehensive tool for visualizing and analyzing Atomic Force Microscopy (AFM) depth profiles. This application provides interactive visualization capabilities for AFM tomography data, enabling researchers to explore material properties at different depths.
+An advanced tool for visualizing and analyzing Atomic Force Microscopy (AFM) depth profiles. DepthScan provides comprehensive interactive visualization capabilities for AFM tomography data, enabling researchers to explore material properties at different depths with unprecedented clarity and precision.
 
 ## Features
 
@@ -19,8 +19,8 @@ A comprehensive tool for visualizing and analyzing Atomic Force Microscopy (AFM)
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/afm-tomography.git
-cd afm-tomography
+git clone https://github.com/yourusername/depthscan.git
+cd depthscan
 
 # Install dependencies
 pip install -r requirements.txt
@@ -30,8 +30,8 @@ pip install -r requirements.txt
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/afm-tomography.git
-cd afm-tomography
+git clone https://github.com/yourusername/depthscan.git
+cd depthscan
 
 # Create and activate conda environment
 conda env create -f environment.yml
@@ -70,7 +70,7 @@ The application expects AFM depth profile images with depth information in the f
 If you use this tool in your research, please cite:
 
 ```
-Author, A. (2025). AFM Tomography Visualization Tool: A comprehensive platform for analyzing material properties at different depths. Journal of Scientific Visualization, XX(X), XXX-XXX.
+Author, A. (2025). DepthScan: An advanced platform for analyzing material properties at different depths using AFM tomography. Journal of Scientific Visualization, XX(X), XXX-XXX.
 ```
 
 ## License
