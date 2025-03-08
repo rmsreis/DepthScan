@@ -5,12 +5,23 @@ import dash_bootstrap_components as dbc
 import plotly.graph_objs as go
 import numpy as np
 import plotly.express as px
+import logging
+
+# Configure logging
+logging.basicConfig(
+    filename='app.log',
+    level=logging.DEBUG,
+    format='%(asctime)s %(levelname)s %(message)s',
+    datefmt='%Y-%m-%d %H:%M:%S'
+)
+logger = logging.getLogger(__name__)
 
 # Import our custom modules
 from data_loader import load_depth_profiles
 from data_processor import enhance_profile_contrast, interpolate_depth_profiles, create_depth_matrix
 from colormaps import generate_plotly_colorscale
 from visualizations import create_profile_plot, create_heatmap_plot, create_3d_surface_plot
+from ml.integration import MLIntegration
 
 # Initialize the Dash app with Bootstrap styling
 app = dash.Dash(
@@ -21,6 +32,9 @@ app = dash.Dash(
     ],
 )
 
+# Initialize ML integration
+ml_integration = MLIntegration(app)
+
 app.title = "DepthScan - AFM Tomography Analysis Tool"
 server = app.server  # Expose Flask server for production deployment
 
@@ -30,8 +44,10 @@ app.layout = dbc.Container(
         dbc.Row(
             [
                 dbc.Col(
-                    html.H1("DepthScan", className="text-center my-4"),
-                    html.H4("Advanced AFM Tomography Analysis Tool", className="text-center text-muted mb-4"),
+                    [
+                        html.H1("DepthScan", className="text-center my-4"),
+                        html.H4("Advanced AFM Tomography Analysis Tool", className="text-center text-muted mb-4")
+                    ],
                     width=12,
                 ),
             ]
@@ -257,6 +273,9 @@ app.layout = dbc.Container(
             ]
         ),
         
+        # Add ML components
+        *ml_integration.get_ml_components(),
+        
         # Store components for intermediate data
         dcc.Store(id="original-data-store"),
         dcc.Store(id="processed-data-store"),
@@ -265,7 +284,7 @@ app.layout = dbc.Container(
         dbc.Row(
             dbc.Col(
                 html.P(
-                    "DepthScan - Advanced AFM Tomography Analysis Tool | © 2025",
+                    "DepthScan - Advanced AFM Tomography Analysis Tool | 2025",
                     className="text-center text-muted mt-4",
                 ),
                 width=12,
@@ -514,4 +533,4 @@ def update_surface_plot(data):
 
 # Run the app
 if __name__ == "__main__":
-    app.run_server(debug=True)
+    app.run_server(debug=True, port=8051)
