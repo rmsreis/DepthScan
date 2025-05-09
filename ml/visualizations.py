@@ -30,7 +30,8 @@ class MLVisualizer:
         self.colorscale = colorscale
     
     def plot_dimensionality_reduction(self, features, labels=None, method='pca', 
-                                     n_components=2, perplexity=30, title=None):
+                                     n_components=2, perplexity=30, title=None,
+                                     animate=False, frame_column=None):
         """
         Create a dimensionality reduction plot using PCA or t-SNE.
         
@@ -41,6 +42,8 @@ class MLVisualizer:
             n_components (int): Number of components for the reduction
             perplexity (int): Perplexity parameter for t-SNE
             title (str, optional): Plot title
+            animate (bool): Whether to create an animated plot (requires frame_column)
+            frame_column (numpy.ndarray, optional): Values to use for animation frames
             
         Returns:
             plotly.graph_objects.Figure: Interactive plotly figure
@@ -70,26 +73,57 @@ class MLVisualizer:
             if labels is not None:
                 df['label'] = labels
                 
-                # Create plot
-                if title is None:
-                    title = f"{method_name} Visualization of AFM Features"
-                
-                fig = px.scatter(df, x='x', y='y', color='label',
-                                 title=title,
-                                 labels={'x': f'{method_name} Component 1', 
-                                         'y': f'{method_name} Component 2',
-                                         'label': 'Label'},
-                                 color_continuous_scale=self.colorscale)
+                # Add animation frames if requested
+                if animate and frame_column is not None:
+                    df['frame'] = frame_column
+                    
+                    # Create animated plot
+                    if title is None:
+                        title = f"{method_name} Visualization of AFM Features (Animated)"
+                    
+                    fig = px.scatter(df, x='x', y='y', color='label', animation_frame='frame',
+                                     title=title,
+                                     labels={'x': f'{method_name} Component 1', 
+                                             'y': f'{method_name} Component 2',
+                                             'label': 'Label',
+                                             'frame': 'Frame'},
+                                     color_continuous_scale=self.colorscale)
+                else:    
+                    # Create static plot
+                    if title is None:
+                        title = f"{method_name} Visualization of AFM Features"
+                    
+                    fig = px.scatter(df, x='x', y='y', color='label',
+                                     title=title,
+                                     labels={'x': f'{method_name} Component 1', 
+                                             'y': f'{method_name} Component 2',
+                                             'label': 'Label'},
+                                     color_continuous_scale=self.colorscale)
             else:
-                # Create plot without color labels
-                if title is None:
-                    title = f"{method_name} Visualization of AFM Features"
-                
-                fig = px.scatter(df, x='x', y='y',
-                                 title=title,
-                                 labels={'x': f'{method_name} Component 1', 
-                                         'y': f'{method_name} Component 2'},
-                                 color_continuous_scale=self.colorscale)
+                # Add animation frames if requested
+                if animate and frame_column is not None:
+                    df['frame'] = frame_column
+                    
+                    # Create animated plot without color labels
+                    if title is None:
+                        title = f"{method_name} Visualization of AFM Features (Animated)"
+                    
+                    fig = px.scatter(df, x='x', y='y', animation_frame='frame',
+                                     title=title,
+                                     labels={'x': f'{method_name} Component 1', 
+                                             'y': f'{method_name} Component 2',
+                                             'frame': 'Frame'},
+                                     color_continuous_scale=self.colorscale)
+                else:
+                    # Create static plot without color labels
+                    if title is None:
+                        title = f"{method_name} Visualization of AFM Features"
+                    
+                    fig = px.scatter(df, x='x', y='y',
+                                     title=title,
+                                     labels={'x': f'{method_name} Component 1', 
+                                             'y': f'{method_name} Component 2'},
+                                     color_continuous_scale=self.colorscale)
         
         elif n_components == 3:
             df = pd.DataFrame({
@@ -143,6 +177,82 @@ class MLVisualizer:
             )
         
         return fig
+    
+    def plot_pca_components(self, features, n_components=4, profile_shape=None, title="PCA Components"):
+        """
+        Visualize PCA components.
+        
+        Args:
+            features (numpy.ndarray): Feature array
+            n_components (int): Number of components to visualize
+            profile_shape (tuple, optional): Shape of the original profiles (height, width)
+                                           Not used in this simplified version
+            title (str): Plot title
+            
+        Returns:
+            plotly.graph_objects.Figure: Interactive plotly figure with PCA components
+        """
+        try:
+            # Apply PCA
+            n_components = min(n_components, features.shape[1])  # Ensure we don't request more components than features
+            pca = PCA(n_components=n_components)
+            pca.fit(features)
+            components = pca.components_
+            explained_var = pca.explained_variance_ratio_
+            
+            # No reshaping - just use the components as 1D arrays
+            # This avoids issues with trying to infer the correct 2D shape
+        
+            # Create subplots
+            fig = make_subplots(
+                rows=int(np.ceil(n_components/2)), cols=2,
+                subplot_titles=[f"Component {i+1} ({explained_var[i]:.1%} variance)" 
+                              for i in range(n_components)]
+            )
+            
+            # Add line plots for each component instead of heatmaps
+            for i in range(n_components):
+                row = i // 2 + 1
+                col = i % 2 + 1
+                
+                # Create a line plot of the component values
+                x = np.arange(len(components[i]))
+                fig.add_trace(
+                    go.Scatter(
+                        x=x, 
+                        y=components[i],
+                        mode='lines',
+                        name=f"Component {i+1}",
+                        line=dict(color=px.colors.sequential.Viridis[i % len(px.colors.sequential.Viridis)])
+                    ),
+                    row=row, col=col
+                )
+                
+                # Update axes for this subplot
+                fig.update_xaxes(title_text="Feature Index", row=row, col=col)
+                fig.update_yaxes(title_text="Weight", row=row, col=col)
+        
+            # Update layout
+            fig.update_layout(
+                title=title,
+                height=300 * int(np.ceil(n_components/2)),
+                width=800,
+                showlegend=False
+            )
+            
+            return fig
+            
+        except Exception as e:
+            # Create a simple error figure
+            fig = go.Figure()
+            fig.add_annotation(
+                text=f"Error visualizing PCA components: {str(e)}",
+                xref="paper", yref="paper",
+                x=0.5, y=0.5, showarrow=False,
+                font=dict(size=14, color="red")
+            )
+            fig.update_layout(title="PCA Components Visualization Error")
+            return fig
     
     def plot_cluster_heatmap(self, profiles, cluster_labels, x_axis=None, y_axis=None, 
                            title="Cluster Assignment Heatmap"):
@@ -325,6 +435,83 @@ class MLVisualizer:
             title=title,
             height=500,
             width=900
+        )
+        
+        return fig
+    
+    def plot_pca_components(self, features, n_components=4, title=None, image_shape=None):
+        """
+        Visualize PCA components as images to show what features contribute to each component.
+        
+        Args:
+            features (numpy.ndarray): Feature array
+            n_components (int): Number of PCA components to visualize
+            title (str, optional): Plot title
+            image_shape (tuple, optional): Shape to reshape components into (default: square)
+            
+        Returns:
+            plotly.graph_objects.Figure: Interactive plotly figure with PCA components
+        """
+        # Apply PCA to extract components
+        pca = PCA(n_components=n_components)
+        pca.fit(features)
+        
+        # Get components and explained variance
+        components = pca.components_
+        explained_variance_ratio = pca.explained_variance_ratio_
+        
+        # Determine image shape if not provided
+        if image_shape is None:
+            # Try to make a square-ish shape based on feature dimensions
+            feature_dim = features.shape[1]
+            side_length = int(np.sqrt(feature_dim))
+            image_shape = (side_length, feature_dim // side_length)
+            
+            # If perfect square not possible, adjust
+            if side_length * (feature_dim // side_length) != feature_dim:
+                # Just use a 1D representation
+                image_shape = (1, feature_dim)
+        
+        # Create subplots - one for each component
+        fig = make_subplots(
+            rows=int(np.ceil(n_components/2)), 
+            cols=2,
+            subplot_titles=[f"Component {i+1} ({explained_variance_ratio[i]:.2%} variance)" 
+                           for i in range(n_components)]
+        )
+        
+        # Add each component as a heatmap
+        for i in range(n_components):
+            # Reshape component to image dimensions if possible
+            try:
+                component_img = components[i].reshape(image_shape)
+            except ValueError:
+                # If reshaping fails, keep as 1D
+                component_img = components[i].reshape(1, -1)
+                
+            # Create heatmap for this component
+            row = i // 2 + 1
+            col = i % 2 + 1
+            
+            fig.add_trace(
+                go.Heatmap(
+                    z=component_img,
+                    colorscale=self.colorscale,
+                    showscale=i == 0,  # Only show colorbar for first component
+                ),
+                row=row, col=col
+            )
+            
+            # Update axes
+            fig.update_xaxes(title="Feature Dimension", row=row, col=col)
+            fig.update_yaxes(title="Feature Dimension", row=row, col=col)
+        
+        # Update layout
+        fig.update_layout(
+            title=title or f"PCA Components ({n_components} components)",
+            height=300 * int(np.ceil(n_components/2)),
+            width=800,
+            showlegend=False
         )
         
         return fig

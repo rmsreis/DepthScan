@@ -30,7 +30,9 @@ app = dash.Dash(
     meta_tags=[
         {"name": "viewport", "content": "width=device-width, initial-scale=1.0"}
     ],
-)
+    suppress_callback_exceptions=True
+)  # Single theme, stable app
+
 
 # Initialize ML integration
 ml_integration = MLIntegration(app)
@@ -45,8 +47,9 @@ app.layout = dbc.Container(
             [
                 dbc.Col(
                     [
+                        html.Img(src="/assets/DScan-Logo-2.png", style={"height": "80px", "display": "block", "margin": "0 auto", "paddingTop": "16px"}),
                         html.H1("DepthScan", className="text-center my-4"),
-                        html.H4("Advanced AFM Tomography Analysis Tool", className="text-center text-muted mb-4")
+                        html.H4("Advanced AFM Tomography Analysis Tool", className="text-center text-muted mb-4"),
                     ],
                     width=12,
                 ),
@@ -532,5 +535,15 @@ def update_surface_plot(data):
     return fig
 
 # Run the app
+
 if __name__ == "__main__":
-    app.run_server(debug=True, port=8051)
+    app.run(debug=True, port=8053)
+def get_config(self):
+    """
+    Return the current feature extraction configuration.
+    You can expand this as needed to include more settings.
+    """
+    return {
+        "available_methods": getattr(self, "available_methods", []),
+        "n_components": getattr(self, "n_components", None)
+    }

@@ -22,3 +22,303 @@
 2025-03-07 22:24:07 DEBUG interactive is False
 2025-03-07 22:24:07 DEBUG platform is darwin
 2025-03-07 22:24:07 INFO Initializing ML Integration
+2025-05-08 10:25:22 DEBUG matplotlib data path: /Users/robertoreis/anaconda3/envs/afm_tomo_env/lib/python3.9/site-packages/matplotlib/mpl-data
+2025-05-08 10:25:22 DEBUG CONFIGDIR=/Users/robertoreis/.matplotlib
+2025-05-08 10:25:22 DEBUG interactive is False
+2025-05-08 10:25:22 DEBUG platform is darwin
+2025-05-08 10:25:52 DEBUG matplotlib data path: /Users/robertoreis/anaconda3/envs/afm_tomo_env/lib/python3.9/site-packages/matplotlib/mpl-data
+2025-05-08 10:25:52 DEBUG CONFIGDIR=/Users/robertoreis/.matplotlib
+2025-05-08 10:25:52 DEBUG interactive is False
+2025-05-08 10:25:52 DEBUG platform is darwin
+2025-05-08 10:26:17 DEBUG matplotlib data path: /Users/robertoreis/anaconda3/envs/afm_tomo_env/lib/python3.9/site-packages/matplotlib/mpl-data
+2025-05-08 10:26:17 DEBUG CONFIGDIR=/Users/robertoreis/.matplotlib
+2025-05-08 10:26:17 DEBUG interactive is False
+2025-05-08 10:26:17 DEBUG platform is darwin
+2025-05-08 10:26:28 INFO Initializing ML Integration
+2025-05-08 10:27:12 DEBUG matplotlib data path: /Users/robertoreis/anaconda3/envs/afm_tomo_env/lib/python3.9/site-packages/matplotlib/mpl-data
+2025-05-08 10:27:12 DEBUG CONFIGDIR=/Users/robertoreis/.matplotlib
+2025-05-08 10:27:12 DEBUG interactive is False
+2025-05-08 10:27:12 DEBUG platform is darwin
+2025-05-08 10:27:13 INFO Initializing ML Integration
+2025-05-08 10:27:13 INFO Dash is running on http://127.0.0.1:8051/
+
+2025-05-08 10:27:13 DEBUG matplotlib data path: /Users/robertoreis/anaconda3/envs/afm_tomo_env/lib/python3.9/site-packages/matplotlib/mpl-data
+2025-05-08 10:27:13 DEBUG CONFIGDIR=/Users/robertoreis/.matplotlib
+2025-05-08 10:27:13 DEBUG interactive is False
+2025-05-08 10:27:13 DEBUG platform is darwin
+2025-05-08 10:27:14 INFO Initializing ML Integration
+2025-05-08 10:31:01 DEBUG matplotlib data path: /Users/robertoreis/anaconda3/envs/afm_tomo_env/lib/python3.9/site-packages/matplotlib/mpl-data
+2025-05-08 10:31:01 DEBUG CONFIGDIR=/Users/robertoreis/.matplotlib
+2025-05-08 10:31:01 DEBUG interactive is False
+2025-05-08 10:31:01 DEBUG platform is darwin
+2025-05-08 10:31:01 INFO Initializing ML Integration
+2025-05-08 10:32:22 DEBUG matplotlib data path: /Users/robertoreis/anaconda3/envs/afm_tomo_env/lib/python3.9/site-packages/matplotlib/mpl-data
+2025-05-08 10:32:22 DEBUG CONFIGDIR=/Users/robertoreis/.matplotlib
+2025-05-08 10:32:22 DEBUG interactive is False
+2025-05-08 10:32:22 DEBUG platform is darwin
+2025-05-08 10:32:23 INFO Initializing ML Integration
+2025-05-08 10:32:23 INFO Dash is running on http://127.0.0.1:8051/
+
+2025-05-08 10:34:44 DEBUG matplotlib data path: /Users/robertoreis/anaconda3/envs/afm_tomo_env/lib/python3.9/site-packages/matplotlib/mpl-data
+2025-05-08 10:34:44 DEBUG CONFIGDIR=/Users/robertoreis/.matplotlib
+2025-05-08 10:34:44 DEBUG interactive is False
+2025-05-08 10:34:44 DEBUG platform is darwin
+2025-05-08 10:34:44 INFO Initializing ML Integration
+2025-05-08 10:34:44 INFO Dash is running on http://127.0.0.1:8051/
+
+2025-05-08 10:56:11 DEBUG matplotlib data path: /Users/robertoreis/anaconda3/envs/afm_tomo_env/lib/python3.9/site-packages/matplotlib/mpl-data
+2025-05-08 10:56:11 DEBUG CONFIGDIR=/Users/robertoreis/.matplotlib
+2025-05-08 10:56:11 DEBUG interactive is False
+2025-05-08 10:56:11 DEBUG platform is darwin
+2025-05-08 10:56:11 INFO Initializing ML Integration
+2025-05-08 10:56:11 INFO Dash is running on http://127.0.0.1:8051/
+
+2025-05-08 10:57:24 DEBUG matplotlib data path: /Users/robertoreis/anaconda3/envs/afm_tomo_env/lib/python3.9/site-packages/matplotlib/mpl-data
+2025-05-08 10:57:24 DEBUG CONFIGDIR=/Users/robertoreis/.matplotlib
+2025-05-08 10:57:24 DEBUG interactive is False
+2025-05-08 10:57:24 DEBUG platform is darwin
+2025-05-08 10:57:25 INFO Initializing ML Integration
+2025-05-08 10:57:25 INFO Dash is running on http://127.0.0.1:8051/
+
+2025-05-08 10:58:02 DEBUG matplotlib data path: /Users/robertoreis/anaconda3/envs/afm_tomo_env/lib/python3.9/site-packages/matplotlib/mpl-data
+2025-05-08 10:58:02 DEBUG CONFIGDIR=/Users/robertoreis/.matplotlib
+2025-05-08 10:58:02 DEBUG interactive is False
+2025-05-08 10:58:02 DEBUG platform is darwin
+2025-05-08 10:58:02 INFO Initializing ML Integration
+2025-05-08 10:58:02 INFO Dash is running on http://127.0.0.1:8052/
+
+2025-05-08 10:58:02 DEBUG matplotlib data path: /Users/robertoreis/anaconda3/envs/afm_tomo_env/lib/python3.9/site-packages/matplotlib/mpl-data
+2025-05-08 10:58:02 DEBUG CONFIGDIR=/Users/robertoreis/.matplotlib
+2025-05-08 10:58:02 DEBUG interactive is False
+2025-05-08 10:58:02 DEBUG platform is darwin
+2025-05-08 10:58:03 INFO Initializing ML Integration
+2025-05-08 11:00:59 DEBUG matplotlib data path: /Users/robertoreis/anaconda3/envs/afm_tomo_env/lib/python3.9/site-packages/matplotlib/mpl-data
+2025-05-08 11:00:59 DEBUG CONFIGDIR=/Users/robertoreis/.matplotlib
+2025-05-08 11:00:59 DEBUG interactive is False
+2025-05-08 11:00:59 DEBUG platform is darwin
+2025-05-08 11:00:59 INFO Initializing ML Integration
+2025-05-08 11:02:20 DEBUG matplotlib data path: /Users/robertoreis/anaconda3/envs/afm_tomo_env/lib/python3.9/site-packages/matplotlib/mpl-data
+2025-05-08 11:02:20 DEBUG CONFIGDIR=/Users/robertoreis/.matplotlib
+2025-05-08 11:02:20 DEBUG interactive is False
+2025-05-08 11:02:20 DEBUG platform is darwin
+2025-05-08 11:02:20 INFO Initializing ML Integration
+2025-05-08 11:02:20 INFO Dash is running on http://127.0.0.1:8052/
+
+2025-05-08 11:02:21 DEBUG matplotlib data path: /Users/robertoreis/anaconda3/envs/afm_tomo_env/lib/python3.9/site-packages/matplotlib/mpl-data
+2025-05-08 11:02:21 DEBUG CONFIGDIR=/Users/robertoreis/.matplotlib
+2025-05-08 11:02:21 DEBUG interactive is False
+2025-05-08 11:02:21 DEBUG platform is darwin
+2025-05-08 11:02:21 INFO Initializing ML Integration
+2025-05-08 11:04:10 DEBUG matplotlib data path: /Users/robertoreis/anaconda3/envs/afm_tomo_env/lib/python3.9/site-packages/matplotlib/mpl-data
+2025-05-08 11:04:10 DEBUG CONFIGDIR=/Users/robertoreis/.matplotlib
+2025-05-08 11:04:10 DEBUG interactive is False
+2025-05-08 11:04:10 DEBUG platform is darwin
+2025-05-08 11:04:10 INFO Initializing ML Integration
+2025-05-08 11:08:00 DEBUG matplotlib data path: /Users/robertoreis/anaconda3/envs/afm_tomo_env/lib/python3.9/site-packages/matplotlib/mpl-data
+2025-05-08 11:08:00 DEBUG CONFIGDIR=/Users/robertoreis/.matplotlib
+2025-05-08 11:08:00 DEBUG interactive is False
+2025-05-08 11:08:00 DEBUG platform is darwin
+2025-05-08 11:08:01 INFO Initializing ML Integration
+2025-05-08 11:08:01 INFO Dash is running on http://127.0.0.1:8052/
+
+2025-05-08 11:08:14 DEBUG matplotlib data path: /Users/robertoreis/anaconda3/envs/afm_tomo_env/lib/python3.9/site-packages/matplotlib/mpl-data
+2025-05-08 11:08:14 DEBUG CONFIGDIR=/Users/robertoreis/.matplotlib
+2025-05-08 11:08:14 DEBUG interactive is False
+2025-05-08 11:08:14 DEBUG platform is darwin
+2025-05-08 11:08:15 INFO Initializing ML Integration
+2025-05-08 11:08:15 INFO Dash is running on http://127.0.0.1:8052/
+
+2025-05-08 11:08:36 DEBUG matplotlib data path: /Users/robertoreis/anaconda3/envs/afm_tomo_env/lib/python3.9/site-packages/matplotlib/mpl-data
+2025-05-08 11:08:36 DEBUG CONFIGDIR=/Users/robertoreis/.matplotlib
+2025-05-08 11:08:36 DEBUG interactive is False
+2025-05-08 11:08:36 DEBUG platform is darwin
+2025-05-08 11:08:37 INFO Initializing ML Integration
+2025-05-08 11:08:37 INFO Dash is running on http://127.0.0.1:8053/
+
+2025-05-08 11:08:37 DEBUG matplotlib data path: /Users/robertoreis/anaconda3/envs/afm_tomo_env/lib/python3.9/site-packages/matplotlib/mpl-data
+2025-05-08 11:08:37 DEBUG CONFIGDIR=/Users/robertoreis/.matplotlib
+2025-05-08 11:08:37 DEBUG interactive is False
+2025-05-08 11:08:37 DEBUG platform is darwin
+2025-05-08 11:08:38 INFO Initializing ML Integration
+2025-05-08 11:09:45 DEBUG matplotlib data path: /Users/robertoreis/anaconda3/envs/afm_tomo_env/lib/python3.9/site-packages/matplotlib/mpl-data
+2025-05-08 11:09:45 DEBUG CONFIGDIR=/Users/robertoreis/.matplotlib
+2025-05-08 11:09:45 DEBUG interactive is False
+2025-05-08 11:09:45 DEBUG platform is darwin
+2025-05-08 11:09:45 INFO Initializing ML Integration
+2025-05-08 11:16:24 DEBUG matplotlib data path: /Users/robertoreis/anaconda3/envs/afm_tomo_env/lib/python3.9/site-packages/matplotlib/mpl-data
+2025-05-08 11:16:24 DEBUG CONFIGDIR=/Users/robertoreis/.matplotlib
+2025-05-08 11:16:24 DEBUG interactive is False
+2025-05-08 11:16:24 DEBUG platform is darwin
+2025-05-08 11:16:24 INFO Initializing ML Integration
+2025-05-08 11:17:05 DEBUG matplotlib data path: /Users/robertoreis/anaconda3/envs/afm_tomo_env/lib/python3.9/site-packages/matplotlib/mpl-data
+2025-05-08 11:17:05 DEBUG CONFIGDIR=/Users/robertoreis/.matplotlib
+2025-05-08 11:17:05 DEBUG interactive is False
+2025-05-08 11:17:05 DEBUG platform is darwin
+2025-05-08 11:17:05 INFO Initializing ML Integration
+2025-05-08 11:17:05 INFO Dash is running on http://127.0.0.1:8053/
+
+2025-05-08 11:17:06 DEBUG matplotlib data path: /Users/robertoreis/anaconda3/envs/afm_tomo_env/lib/python3.9/site-packages/matplotlib/mpl-data
+2025-05-08 11:17:06 DEBUG CONFIGDIR=/Users/robertoreis/.matplotlib
+2025-05-08 11:17:06 DEBUG interactive is False
+2025-05-08 11:17:06 DEBUG platform is darwin
+2025-05-08 11:17:06 INFO Initializing ML Integration
+2025-05-08 11:23:30 DEBUG matplotlib data path: /Users/robertoreis/anaconda3/envs/afm_tomo_env/lib/python3.9/site-packages/matplotlib/mpl-data
+2025-05-08 11:23:30 DEBUG CONFIGDIR=/Users/robertoreis/.matplotlib
+2025-05-08 11:23:30 DEBUG interactive is False
+2025-05-08 11:23:30 DEBUG platform is darwin
+2025-05-08 11:23:30 INFO Initializing ML Integration
+2025-05-08 11:23:30 INFO Dash is running on http://127.0.0.1:8053/
+
+2025-05-08 11:23:31 DEBUG matplotlib data path: /Users/robertoreis/anaconda3/envs/afm_tomo_env/lib/python3.9/site-packages/matplotlib/mpl-data
+2025-05-08 11:23:31 DEBUG CONFIGDIR=/Users/robertoreis/.matplotlib
+2025-05-08 11:23:31 DEBUG interactive is False
+2025-05-08 11:23:31 DEBUG platform is darwin
+2025-05-08 11:23:31 INFO Initializing ML Integration
+2025-05-08 11:26:21 DEBUG matplotlib data path: /Users/robertoreis/anaconda3/envs/afm_tomo_env/lib/python3.9/site-packages/matplotlib/mpl-data
+2025-05-08 11:26:21 DEBUG CONFIGDIR=/Users/robertoreis/.matplotlib
+2025-05-08 11:26:21 DEBUG interactive is False
+2025-05-08 11:26:21 DEBUG platform is darwin
+2025-05-08 11:26:21 INFO Initializing ML Integration
+2025-05-08 11:26:21 INFO Dash is running on http://127.0.0.1:8053/
+
+2025-05-08 11:26:22 DEBUG matplotlib data path: /Users/robertoreis/anaconda3/envs/afm_tomo_env/lib/python3.9/site-packages/matplotlib/mpl-data
+2025-05-08 11:26:22 DEBUG CONFIGDIR=/Users/robertoreis/.matplotlib
+2025-05-08 11:26:22 DEBUG interactive is False
+2025-05-08 11:26:22 DEBUG platform is darwin
+2025-05-08 11:26:22 INFO Initializing ML Integration
+2025-05-08 11:39:46 DEBUG matplotlib data path: /Users/robertoreis/anaconda3/envs/afm_tomo_env/lib/python3.9/site-packages/matplotlib/mpl-data
+2025-05-08 11:39:46 DEBUG CONFIGDIR=/Users/robertoreis/.matplotlib
+2025-05-08 11:39:46 DEBUG interactive is False
+2025-05-08 11:39:46 DEBUG platform is darwin
+2025-05-08 11:39:47 INFO Initializing ML Integration
+2025-05-08 11:39:47 INFO Dash is running on http://127.0.0.1:8053/
+
+2025-05-08 11:39:48 DEBUG matplotlib data path: /Users/robertoreis/anaconda3/envs/afm_tomo_env/lib/python3.9/site-packages/matplotlib/mpl-data
+2025-05-08 11:39:48 DEBUG CONFIGDIR=/Users/robertoreis/.matplotlib
+2025-05-08 11:39:48 DEBUG interactive is False
+2025-05-08 11:39:48 DEBUG platform is darwin
+2025-05-08 11:39:48 INFO Initializing ML Integration
+2025-05-08 11:44:43 DEBUG matplotlib data path: /Users/robertoreis/anaconda3/envs/afm_tomo_env/lib/python3.9/site-packages/matplotlib/mpl-data
+2025-05-08 11:44:43 DEBUG CONFIGDIR=/Users/robertoreis/.matplotlib
+2025-05-08 11:44:43 DEBUG interactive is False
+2025-05-08 11:44:43 DEBUG platform is darwin
+2025-05-08 11:44:44 INFO Initializing ML Integration
+2025-05-08 11:45:53 DEBUG matplotlib data path: /Users/robertoreis/anaconda3/envs/afm_tomo_env/lib/python3.9/site-packages/matplotlib/mpl-data
+2025-05-08 11:45:53 DEBUG CONFIGDIR=/Users/robertoreis/.matplotlib
+2025-05-08 11:45:53 DEBUG interactive is False
+2025-05-08 11:45:53 DEBUG platform is darwin
+2025-05-08 11:45:54 INFO Initializing ML Integration
+2025-05-08 11:47:22 DEBUG matplotlib data path: /Users/robertoreis/anaconda3/envs/afm_tomo_env/lib/python3.9/site-packages/matplotlib/mpl-data
+2025-05-08 11:47:22 DEBUG CONFIGDIR=/Users/robertoreis/.matplotlib
+2025-05-08 11:47:22 DEBUG interactive is False
+2025-05-08 11:47:22 DEBUG platform is darwin
+2025-05-08 11:47:23 INFO Initializing ML Integration
+2025-05-08 11:48:39 DEBUG matplotlib data path: /Users/robertoreis/anaconda3/envs/afm_tomo_env/lib/python3.9/site-packages/matplotlib/mpl-data
+2025-05-08 11:48:39 DEBUG CONFIGDIR=/Users/robertoreis/.matplotlib
+2025-05-08 11:48:39 DEBUG interactive is False
+2025-05-08 11:48:39 DEBUG platform is darwin
+2025-05-08 11:48:39 INFO Initializing ML Integration
+2025-05-08 11:49:58 DEBUG matplotlib data path: /Users/robertoreis/anaconda3/envs/afm_tomo_env/lib/python3.9/site-packages/matplotlib/mpl-data
+2025-05-08 11:49:58 DEBUG CONFIGDIR=/Users/robertoreis/.matplotlib
+2025-05-08 11:49:58 DEBUG interactive is False
+2025-05-08 11:49:58 DEBUG platform is darwin
+2025-05-08 11:49:58 INFO Initializing ML Integration
+2025-05-08 11:51:48 DEBUG matplotlib data path: /Users/robertoreis/anaconda3/envs/afm_tomo_env/lib/python3.9/site-packages/matplotlib/mpl-data
+2025-05-08 11:51:48 DEBUG CONFIGDIR=/Users/robertoreis/.matplotlib
+2025-05-08 11:51:48 DEBUG interactive is False
+2025-05-08 11:51:48 DEBUG platform is darwin
+2025-05-08 11:51:48 INFO Initializing ML Integration
+2025-05-08 11:56:13 DEBUG matplotlib data path: /Users/robertoreis/anaconda3/envs/afm_tomo_env/lib/python3.9/site-packages/matplotlib/mpl-data
+2025-05-08 11:56:13 DEBUG CONFIGDIR=/Users/robertoreis/.matplotlib
+2025-05-08 11:56:13 DEBUG interactive is False
+2025-05-08 11:56:13 DEBUG platform is darwin
+2025-05-08 11:56:14 INFO Initializing ML Integration
+2025-05-08 11:56:33 DEBUG matplotlib data path: /Users/robertoreis/anaconda3/envs/afm_tomo_env/lib/python3.9/site-packages/matplotlib/mpl-data
+2025-05-08 11:56:33 DEBUG CONFIGDIR=/Users/robertoreis/.matplotlib
+2025-05-08 11:56:33 DEBUG interactive is False
+2025-05-08 11:56:33 DEBUG platform is darwin
+2025-05-08 11:56:34 INFO Initializing ML Integration
+2025-05-08 11:56:55 DEBUG matplotlib data path: /Users/robertoreis/anaconda3/envs/afm_tomo_env/lib/python3.9/site-packages/matplotlib/mpl-data
+2025-05-08 11:56:55 DEBUG CONFIGDIR=/Users/robertoreis/.matplotlib
+2025-05-08 11:56:55 DEBUG interactive is False
+2025-05-08 11:56:55 DEBUG platform is darwin
+2025-05-08 11:56:56 INFO Initializing ML Integration
+2025-05-08 12:10:12 DEBUG matplotlib data path: /Users/robertoreis/anaconda3/envs/afm_tomo_env/lib/python3.9/site-packages/matplotlib/mpl-data
+2025-05-08 12:10:12 DEBUG CONFIGDIR=/Users/robertoreis/.matplotlib
+2025-05-08 12:10:12 DEBUG interactive is False
+2025-05-08 12:10:12 DEBUG platform is darwin
+2025-05-08 12:10:12 INFO Initializing ML Integration
+2025-05-08 12:10:12 INFO Dash is running on http://127.0.0.1:8053/
+
+2025-05-08 12:10:13 DEBUG matplotlib data path: /Users/robertoreis/anaconda3/envs/afm_tomo_env/lib/python3.9/site-packages/matplotlib/mpl-data
+2025-05-08 12:10:13 DEBUG CONFIGDIR=/Users/robertoreis/.matplotlib
+2025-05-08 12:10:13 DEBUG interactive is False
+2025-05-08 12:10:13 DEBUG platform is darwin
+2025-05-08 12:10:13 INFO Initializing ML Integration
+2025-05-08 12:12:08 DEBUG matplotlib data path: /Users/robertoreis/anaconda3/envs/afm_tomo_env/lib/python3.9/site-packages/matplotlib/mpl-data
+2025-05-08 12:12:08 DEBUG CONFIGDIR=/Users/robertoreis/.matplotlib
+2025-05-08 12:12:08 DEBUG interactive is False
+2025-05-08 12:12:08 DEBUG platform is darwin
+2025-05-08 12:12:09 INFO Initializing ML Integration
+2025-05-08 12:17:50 DEBUG matplotlib data path: /Users/robertoreis/anaconda3/envs/afm_tomo_env/lib/python3.9/site-packages/matplotlib/mpl-data
+2025-05-08 12:17:50 DEBUG CONFIGDIR=/Users/robertoreis/.matplotlib
+2025-05-08 12:17:50 DEBUG interactive is False
+2025-05-08 12:17:50 DEBUG platform is darwin
+2025-05-08 12:17:50 INFO Initializing ML Integration
+2025-05-08 12:17:50 INFO Dash is running on http://127.0.0.1:8053/
+
+2025-05-08 12:17:51 DEBUG matplotlib data path: /Users/robertoreis/anaconda3/envs/afm_tomo_env/lib/python3.9/site-packages/matplotlib/mpl-data
+2025-05-08 12:17:51 DEBUG CONFIGDIR=/Users/robertoreis/.matplotlib
+2025-05-08 12:17:51 DEBUG interactive is False
+2025-05-08 12:17:51 DEBUG platform is darwin
+2025-05-08 12:17:51 INFO Initializing ML Integration
+2025-05-08 12:20:19 DEBUG matplotlib data path: /Users/robertoreis/anaconda3/envs/afm_tomo_env/lib/python3.9/site-packages/matplotlib/mpl-data
+2025-05-08 12:20:19 DEBUG CONFIGDIR=/Users/robertoreis/.matplotlib
+2025-05-08 12:20:19 DEBUG interactive is False
+2025-05-08 12:20:19 DEBUG platform is darwin
+2025-05-08 12:26:13 DEBUG matplotlib data path: /Users/robertoreis/anaconda3/envs/afm_tomo_env/lib/python3.9/site-packages/matplotlib/mpl-data
+2025-05-08 12:26:13 DEBUG CONFIGDIR=/Users/robertoreis/.matplotlib
+2025-05-08 12:26:13 DEBUG interactive is False
+2025-05-08 12:26:13 DEBUG platform is darwin
+2025-05-08 12:35:57 DEBUG matplotlib data path: /Users/robertoreis/anaconda3/lib/python3.10/site-packages/matplotlib/mpl-data
+2025-05-08 12:35:57 DEBUG CONFIGDIR=/Users/robertoreis/.matplotlib
+2025-05-08 12:35:57 DEBUG interactive is False
+2025-05-08 12:35:57 DEBUG platform is darwin
+2025-05-08 12:53:49 DEBUG matplotlib data path: /Users/robertoreis/anaconda3/lib/python3.10/site-packages/matplotlib/mpl-data
+2025-05-08 12:53:49 DEBUG CONFIGDIR=/Users/robertoreis/.matplotlib
+2025-05-08 12:53:49 DEBUG interactive is False
+2025-05-08 12:53:49 DEBUG platform is darwin
+2025-05-08 12:57:07 DEBUG matplotlib data path: /Users/robertoreis/anaconda3/lib/python3.10/site-packages/matplotlib/mpl-data
+2025-05-08 12:57:07 DEBUG CONFIGDIR=/Users/robertoreis/.matplotlib
+2025-05-08 12:57:07 DEBUG interactive is False
+2025-05-08 12:57:07 DEBUG platform is darwin
+2025-05-08 13:00:36 DEBUG matplotlib data path: /Users/robertoreis/anaconda3/lib/python3.10/site-packages/matplotlib/mpl-data
+2025-05-08 13:00:36 DEBUG CONFIGDIR=/Users/robertoreis/.matplotlib
+2025-05-08 13:00:36 DEBUG interactive is False
+2025-05-08 13:00:36 DEBUG platform is darwin
+2025-05-08 15:13:48 DEBUG matplotlib data path: /Users/robertoreis/anaconda3/lib/python3.10/site-packages/matplotlib/mpl-data
+2025-05-08 15:13:48 DEBUG CONFIGDIR=/Users/robertoreis/.matplotlib
+2025-05-08 15:13:48 DEBUG interactive is False
+2025-05-08 15:13:48 DEBUG platform is darwin
+2025-05-08 15:22:42 DEBUG matplotlib data path: /Users/robertoreis/anaconda3/lib/python3.10/site-packages/matplotlib/mpl-data
+2025-05-08 15:22:42 DEBUG CONFIGDIR=/Users/robertoreis/.matplotlib
+2025-05-08 15:22:42 DEBUG interactive is False
+2025-05-08 15:22:42 DEBUG platform is darwin
+2025-05-08 15:22:44 INFO Initializing ML Integration
+2025-05-08 15:22:44 INFO Dash is running on http://127.0.0.1:8053/
+
+2025-05-08 15:22:45 DEBUG matplotlib data path: /Users/robertoreis/anaconda3/lib/python3.10/site-packages/matplotlib/mpl-data
+2025-05-08 15:22:45 DEBUG CONFIGDIR=/Users/robertoreis/.matplotlib
+2025-05-08 15:22:45 DEBUG interactive is False
+2025-05-08 15:22:45 DEBUG platform is darwin
+2025-05-08 15:22:45 INFO Initializing ML Integration
+2025-05-08 15:24:13 DEBUG matplotlib data path: /Users/robertoreis/anaconda3/lib/python3.10/site-packages/matplotlib/mpl-data
+2025-05-08 15:24:13 DEBUG CONFIGDIR=/Users/robertoreis/.matplotlib
+2025-05-08 15:24:13 DEBUG interactive is False
+2025-05-08 15:24:13 DEBUG platform is darwin
+2025-05-08 15:24:14 INFO Initializing ML Integration
+2025-05-08 15:31:11 DEBUG matplotlib data path: /Users/robertoreis/anaconda3/lib/python3.10/site-packages/matplotlib/mpl-data
+2025-05-08 15:31:11 DEBUG CONFIGDIR=/Users/robertoreis/.matplotlib
+2025-05-08 15:31:11 DEBUG interactive is False
+2025-05-08 15:31:11 DEBUG platform is darwin
+2025-05-08 15:31:11 INFO Initializing ML Integration

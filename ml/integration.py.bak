@@ -1,5 +1,5 @@
 import dash
-from dash import dcc, html, Input, Output, State, callback_context
+from dash import dcc, html, Input, Output, State
 import dash_bootstrap_components as dbc
 from dash.exceptions import PreventUpdate
 import numpy as np
@@ -263,8 +263,11 @@ class MLIntegration:
                             ])
                         ])
                     ], width=8)
+                ], width=12)
+            ]
                 ])
-            ])
+            ]
+        )
         
         # Create stores for ML data
         extracted_features_store = dcc.Store(id='extracted-features-store')
@@ -307,7 +310,7 @@ class MLIntegration:
             
             return features_list, "Features extracted successfully!"
         
-        # --- Feature Space Visualization Callback ---
+        # --- Feature Space (PCA/t-SNE) Visualization Callback ---
         @self.app.callback(
             Output('feature-space-graph', 'figure'),
             Input('extracted-features-store', 'data'),
@@ -359,50 +362,36 @@ class MLIntegration:
             prevent_initial_call=True
         )
         def update_pca_components_graph(features_data, n_components, processed_data):
-            logger.debug(f"PCA Components: Callback triggered. n_components: {n_components}")
             if features_data is None:
-                logger.warning("PCA Components: features_data is None. Preventing update.")
                 raise PreventUpdate
             
             features = np.array(features_data)
-            logger.debug(f"PCA Components: features converted to array with shape {features.shape}")
             
+            # Try to determine profile shape from processed data
             profile_shape = None
             if processed_data is not None and 'profiles' in processed_data:
                 profiles = np.array(processed_data['profiles'])
-                logger.debug(f"PCA Components: 'profiles' found in processed_data with shape {profiles.shape} and ndim {profiles.ndim}")
-                if profiles.ndim == 2: # (N_profiles, Length_of_profile)
-                    profile_shape = (1, profiles.shape[1]) 
-                    logger.debug(f"PCA Components: Determined profile_shape for 2D profiles: {profile_shape}")
-                elif profiles.ndim > 2: # (N_images, H, W, [C]) or (H, W, [C])
-                    profile_shape = profiles.shape[-2:] # Assumes H, W are the last two
-                    logger.debug(f"PCA Components: Determined profile_shape for >2D profiles: {profile_shape}")
-                else:
-                    logger.warning(f"PCA Components: 'profiles' ndim is {profiles.ndim}. Cannot determine profile_shape.")
-            elif processed_data is None:
-                logger.warning("PCA Components: processed_data is None. Cannot determine profile_shape.")
-            else:
-                logger.warning("PCA Components: 'profiles' key not found in processed_data. Cannot determine profile_shape.")
+                if profiles.ndim == 2:
+                    # For 2D profiles, use the second dimension as width
+                    profile_shape = (1, profiles.shape[1])
+                elif profiles.ndim > 2:
+                    # For higher dimensional data, use the last two dimensions
+                    profile_shape = profiles.shape[-2:]
             
-            try:
-                logger.info(f"PCA Components: Calling plot_pca_components with n_components={n_components}, image_shape={profile_shape}")
-                fig = self.visualizer.plot_pca_components(
-                    features,
-                    n_components=n_components,
-                    profile_shape=profile_shape,
-                    title=f"PCA Components in Image Space ({n_components} components)"
-                )
-                logger.info("PCA Components: plot_pca_components call successful.")
-                return fig
-            except Exception as e:
-                logger.error(f"Error in PCA visualization: {e}", exc_info=True)
-                fig = go.Figure()
-                fig.update_layout(
-                    title="PCA Components Visualization Error",
-                    annotations=[dict(text=f"Error generating PCA components: {str(e)}", showarrow=False)]
-                )
-                return fig
-
+            # Use MLVisualizer
+            from .visualizations import MLVisualizer
+            visualizer = MLVisualizer()
+            
+            # Create the visualization
+            fig = visualizer.plot_pca_components(
+                features,
+                n_components=n_components,
+                profile_shape=profile_shape,
+                title=f"PCA Components in Image Space ({n_components} components)"
+            )
+            
+            return fig
+        
         @self.app.callback(
             Output('trained-model-store', 'data'),
             Output('model-training-output', 'children'),

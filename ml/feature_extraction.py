@@ -10,6 +10,80 @@ logger = logging.getLogger(__name__)
 class FeatureExtractor:
     """Class for unsupervised feature extraction from AFM depth profiles."""
     
+    def get_config(self):
+        """
+        Return the current feature extraction configuration.
+        You can expand this as needed to include more settings.
+        """
+        return {
+            "available_methods": getattr(self, "available_methods", []),
+            "n_components": getattr(self, "n_components", None)
+        }
+    
+    def extract_statistical_features(self, profiles):
+        """
+        Extract statistical features (mean, std, skewness, kurtosis) from profiles.
+        Args:
+            profiles (np.ndarray): 2D array (n_profiles, profile_length)
+        Returns:
+            np.ndarray: (n_profiles, n_features)
+        """
+        from scipy.stats import skew, kurtosis
+        means = np.mean(profiles, axis=1, keepdims=True)
+        stds = np.std(profiles, axis=1, keepdims=True)
+        skews = skew(profiles, axis=1, keepdims=True)
+        kurtoses = kurtosis(profiles, axis=1, keepdims=True)
+        return np.concatenate([means, stds, skews, kurtoses], axis=1)
+    
+    def extract_spectral_features(self, profiles):
+        """
+        Extract spectral features (e.g., first N FFT magnitudes) from profiles.
+        Args:
+            profiles (np.ndarray): 2D array (n_profiles, profile_length)
+        Returns:
+            np.ndarray: (n_profiles, n_features)
+        """
+        N = 10  # Number of FFT components to keep
+        fft_vals = np.abs(np.fft.rfft(profiles, axis=1))
+        fft_features = fft_vals[:, :N]
+        return fft_features
+    
+    def extract_all_features(self, profiles):
+        """
+        Extract all available features (statistical, spectral, morphological) from profiles.
+        Args:
+            profiles (np.ndarray): 2D array (n_profiles, profile_length)
+        Returns:
+            np.ndarray: (n_profiles, n_features) combined feature array
+        """
+        # Extract each feature type
+        statistical_features = self.extract_statistical_features(profiles)
+        spectral_features = self.extract_spectral_features(profiles)
+        morphological_features = self.extract_morphological_features(profiles)
+        
+        # Combine all features
+        combined_features = np.concatenate([
+            statistical_features,
+            spectral_features,
+            morphological_features
+        ], axis=1)
+        
+        return combined_features
+    
+    def extract_morphological_features(self, profiles):
+        """
+        Extract simple morphological features from AFM profiles.
+        Args:
+            profiles (np.ndarray): 2D array of profiles
+        Returns:
+            np.ndarray: Array of morphological features (e.g., max, min, peak-to-peak)
+        """
+        import numpy as np
+        max_vals = np.max(profiles, axis=1, keepdims=True)
+        min_vals = np.min(profiles, axis=1, keepdims=True)
+        ptp_vals = np.ptp(profiles, axis=1, keepdims=True)  # Peak-to-peak
+        return np.concatenate([max_vals, min_vals, ptp_vals], axis=1)
+    
     def __init__(self):
         self.models = {
             'pca': None,
