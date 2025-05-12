@@ -322,3 +322,10 @@
 2025-05-08 15:31:11 DEBUG interactive is False
 2025-05-08 15:31:11 DEBUG platform is darwin
 2025-05-08 15:31:11 INFO Initializing ML Integration
+2025-05-09 10:30:47 DEBUG matplotlib data path: /Users/robertoreis/anaconda3/lib/python3.10/site-packages/matplotlib/mpl-data
+2025-05-09 10:30:47 DEBUG CONFIGDIR=/Users/robertoreis/.matplotlib
+2025-05-09 10:30:47 DEBUG interactive is False
+2025-05-09 10:30:47 DEBUG platform is darwin
+2025-05-09 10:30:47 INFO Initializing ML Integration
+2025-05-09 10:30:47 INFO Dash is running on http://127.0.0.1:8053/
+
