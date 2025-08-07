@@ -7,7 +7,8 @@ from skimage import io
 def parse_depth_from_filename(filename):
     """
     Extract depth information from the filename.
-    Supports optional units like 'um', 'micron', or 'microns'.
+    Supports optional units like 'um', 'micron', or 'microns' and
+    handles integer or decimal values.
     
     Args:
         filename (str): The filename containing depth information
@@ -15,7 +16,7 @@ def parse_depth_from_filename(filename):
     Returns:
         float: The parsed depth value in microns
     """
-    match = re.search(r'(\d+)\s*(?:um|micron(?:s)?)?', filename, re.IGNORECASE)
+    match = re.search(r"(-?\d+(?:\.\d+)?)\s*(?:um|micron(?:s)?)?", filename, re.IGNORECASE)
     if match:
         return float(match.group(1))
     else:
