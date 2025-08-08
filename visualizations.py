@@ -24,13 +24,13 @@ def create_profile_plot(profile, depth, x_coords=None):
         x=x_coords,
         y=profile,
         mode="lines",
-        name=f"Depth: {depth:.1f}u03bcm",
+        name=f"Depth: {depth:.1f}µm",
         line=dict(color="#1f77b4", width=2),
     ))
     
     # Update layout
     fig.update_layout(
-        title=f"AFM Profile at Depth {depth:.1f}u03bcm",
+        title=f"AFM Profile at Depth {depth:.1f}µm",
         xaxis_title="Spatial Coordinate",
         yaxis_title="Normalized Signal",
         margin=dict(l=40, r=40, t=40, b=40),
@@ -69,7 +69,7 @@ def create_heatmap_plot(depths, profiles, x_coords=None):
     fig.update_layout(
         title="AFM Depth Profiles Heatmap",
         xaxis_title="Spatial Coordinate",
-        yaxis_title="Depth (u03bcm)",
+        yaxis_title="Depth (µm)",
         margin=dict(l=40, r=40, t=40, b=40),
         template="plotly_white",
     )
@@ -107,7 +107,7 @@ def create_3d_surface_plot(depths, profiles, x_coords=None):
         title="AFM Depth Profiles 3D Surface",
         scene=dict(
             xaxis_title="Spatial Coordinate",
-            yaxis_title="Depth (u03bcm)",
+            yaxis_title="Depth (µm)",
             zaxis_title="Signal",
             camera=dict(
                 eye=dict(x=1.5, y=-1.5, z=1.2),
