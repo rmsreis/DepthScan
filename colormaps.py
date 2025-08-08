@@ -62,7 +62,7 @@ def create_depth_colormap(start_depth, end_depth, name='depth_colormap', n_color
     
     for i in range(n_colors):
         t = i / (n_colors - 1)
-        h = 0.6 * (1-t)  # Hue: blue (0.6) to purple (0.8)
+        h = 0.6 * (1-t)  # Hue: blue (0.6) down to red (0.0)
         s = 0.8  # High saturation throughout
         v = 1.0 - 0.6 * t  # Value decreases with depth (lighter to darker)
         r, g, b = colorsys.hsv_to_rgb(h, s, v)
