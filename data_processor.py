@@ -17,9 +17,13 @@ def enhance_profile_contrast(profiles, percentile_low=2, percentile_high=98):
     p_low = np.percentile(profiles, percentile_low)
     p_high = np.percentile(profiles, percentile_high)
     
+    # If percentile bounds are equal, avoid division by zero
+    if p_high == p_low:
+        return np.zeros_like(profiles)
+
     # Apply contrast stretching
     enhanced = np.clip((profiles - p_low) / (p_high - p_low), 0, 1)
-    
+
     return enhanced
 
 def interpolate_depth_profiles(depths, profiles, interp_factor=5, method='linear'):
